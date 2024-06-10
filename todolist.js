@@ -1,11 +1,13 @@
 let array1 = JSON.parse(localStorage.getItem('storage')) || [];
     
     function objectsetup(){
-        console.log('initial setup Activated');
         let objectss = {};
         let name = document.querySelector('.event-style').value;
         let date = document.querySelector('.date-style').value;
-        if(name === ''){
+        if(name === '' && date === ''){
+            alert('Both Name and Date Field Is Empty');
+        }
+        else if(name === ''){
             alert('Event Name Is Empty');
         }
         else if(date === ''){
